@@ -1,4 +1,4 @@
-// code your solution here
+
 function saturdayFun(activity = "roller-skate"){
     console.log(`This Saturday, I want to ${activity}!`);
     return `This Saturday, I want to ${activity}!`
@@ -11,9 +11,11 @@ const mondayWork = function (activity = "go to the office"){
 }
 
 const wrapAdjective = function(outer = "*"){
-    const inner = function(work = "special"){
-        let result = `You are ${work}`
-        return result("*")
+    return function(work = "a hard worker"){
+        return (`You are ${outer}${work}${outer}!`)
+    
     }
-
+    
+         
 }
+const output = wrapAdjective("||")
